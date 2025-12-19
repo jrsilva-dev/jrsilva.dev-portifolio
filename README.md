@@ -61,8 +61,8 @@ cd jrsilva.dev-portifolio</code></pre>
 
   <h2>Projetos Destacados</h2>
     <ul>
-        <li><strong>Assistente Virtual</strong>: Chatbot para WhatsApp e integração em sites (JavaScript, Node.js).</li>
-        <li><strong>Estética Feminina</strong>: Website para clínica com agendamento online (HTML/CSS, JavaScript).</li>
+        <li><strong>Cardápio VirtuaL</strong>: Cardápio digital responsivo desenvolvido para lanchonete, com foco em agilidade no atendimento e facilidade para os clientes realizarem pedidos via WhatsApp (HTML/CSS, JavaScript).</li>
+        <li><strong>Página de Links Multifuncional</strong>: Uma landing page otimizada para centralizar todos os links importantes em um único lugar (HTML/CSS, JavaScript).</li>
         <li><strong>Automação de Tarefas</strong>: Script para cadastro automatizado de produtos (Python, Pyautogui, Pandas).</li>
     </ul>
 
