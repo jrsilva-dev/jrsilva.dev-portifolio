@@ -561,6 +561,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 50px;
+  }
+
   section {
     padding: 80px 0;
   }
