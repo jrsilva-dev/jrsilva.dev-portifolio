@@ -5,15 +5,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio Junior Silva</title>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="main.css" />
-  <script src="script.js"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="imagens/icons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="imagens/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="imagens/icons/favicon-192x192.png">
+  <link rel="icon" type="image/png" href="imagens/icons/favicon.png">
+  <link rel="apple-touch-icon" href="imagens/icons/apple-touch-icon.png">
 </head>
 
 <body>
+  <div id="topo"></div>
+
   <nav>
     <div class="container">
-      <div class="logo">JS</div>
+      <div class="logo">
+        <a href="#topo">
+          <img src="/imagens/logo-js-dev.png" alt="Logo JS">
+        </a>
+      </div>
+  
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      
       <ul class="menu">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
@@ -23,7 +40,8 @@
       </ul>
     </div>
   </nav>
-  <section id="inicio">
+
+  <section id="inicio" class="reveal">
     <div class="container">
       <div class="hero">
         <div class="hero-text">
@@ -32,9 +50,12 @@
             encantam e solucionam problemas.</p>
           <a href="#projetos" class="btn">Ver meus projetos</a>
           <div class="social-links" style="margin-top: 20px;">
-            <a href="https://github.com/jrsilva-dev"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jr-silva-014701296/"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/jrsilva.dev/"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/jrsilva-dev" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/jr-silva-014701296/" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/jrsilva.dev/" target="_blank" rel="noopener noreferrer"><i
+                class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="hero-image">
@@ -45,25 +66,23 @@
       </div>
     </div>
   </section>
-  <section id="sobre">
+  <section id="sobre" class="reveal">
     <div class="container">
       <h2>Sobre Mim</h2>
       <div class="about-content">
         <div class="about-text">
-          <p>Olá! Sou Junior Silva, um desenvolvedor Full Stack de 28 anos apaixonado por tecnologia e inovação.
-            Atualmente estou graduando em Análise e Desenvolvimento de Sistemas e me dedicando ao estudo de ferramentas
-            modernas de desenvolvimento.</p>
-          <p>Minha especialidade é a criação de interfaces modernas e responsivas utilizando HTML, CSS e JavaScript, com
-            foco em React para o frontend e Node.js para o backend. Acredito que a combinação de design atraente e
-            funcionalidade robusta é essencial para criar experiências digitais excepcionais.</p>
-          <p>Além disso, aplico Python em projetos voltados para automações de tarefas e análise de dados. Utilizo a
-            linguagem para criar scripts que reduzem o trabalho manual, otimizar fluxos de processos e gerar insights
-            através de tratamento e visualização de informações. Essa experiência me permite integrar soluções de
-            produtividade e inteligência aos sistemas desenvolvidos, unindo a eficiência do backend com a capacidade de
-            tomada de decisões orientada por dados.</p>
-          <p>Meu comprometimento com a qualidade e minha atenção aos detalhes me permitem entregar projetos que não
-            apenas atendem, mas superam as expectativas dos clientes. Estou sempre em busca de novos desafios e
-            oportunidades para expandir meus conhecimentos.</p>
+          <p>Olá! Sou Junior Silva, desenvolvedor Full Stack, graduando em Análise e Desenvolvimento de Sistemas,
+            com foco na criação de sistemas web e soluções digitais aplicadas a problemas reais.</p>
+          <p>Atuo no desenvolvimento de aplicações completas —
+            do planejamento e UI/UX ao front-end, back-end e banco de dados —
+            utilizando tecnologias como HTML, CSS, JavaScript, React e Node.js,
+            sempre priorizando organização, performance e boa experiência do usuário.</p>
+          <p>Já desenvolvi e comercializei sistemas, além de manter projetos ativos como portfólio profissional,
+            página de links personalizada e aplicações web próprias.</p>
+          <p>Também utilizo Python no desenvolvimento de scripts de automação de tarefas e otimização de processos,
+            criando soluções que reduzem trabalho manual, aumentam produtividade e apoiam a tomada de decisões.</p>
+          <p>Busco constantemente novos desafios e oportunidades para aplicar meus conhecimentos na prática,
+            evoluir tecnicamente e entregar soluções eficientes, funcionais e bem estruturadas.</p>
         </div>
         <div class="skills">
           <div class="skill-item">
@@ -86,61 +105,76 @@
       </div>
     </div>
   </section>
-  <section id="projetos">
+
+  <section id="projetos" class="reveal">
     <div class="container">
       <h2>Meus Projetos</h2>
       <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card reveal">
           <div class="project-img">
-            <img src="imagens/cardapio virtual speedburguers.jpeg" alt="Atendente Virtual">
+            <img src="/imagens/complexo-xp-server.png" alt="Landing Page – Complexo XP">
           </div>
           <div class="project-content">
-            <h3>Cardápio Virtual</h3>
-            <p>Cardápio digital responsivo desenvolvido para a lanchonete Speed Burguers, com foco em agilidade no
-              atendimento e facilidade para os clientes realizarem pedidos via WhatsApp.</p>
+            <h3>Landing Page - Complexo XP</h3>
+            <p>Bridge page para comunidade gamer com foco em conversão e identidade visual urbana.</p>
             <div class="project-tags">
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
+              <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="#" class="btn">Ver Detalhes</a>
+            <a href="https://jrsilva-dev.github.io/complexo-xp-server/" target="_blank" rel="noopener noreferrer"
+              class="btn">Ver Detalhes</a>
           </div>
         </div>
-        <div class="project-card">
+
+        <div class="project-card reveal">
+          <div class="project-img">
+            <img src="/imagens/meus-links.png" alt="Central de Links – Jr. Silva Dev">
+          </div>
+          <div class="project-content">
+            <h3>Central de Links</h3>
+            <p>Link-in-Bio personalizada com estética Cyberpunk/Neon.</p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <a href="https://jrsilva-dev.github.io/meus-links" target="_blank" rel="noopener noreferrer" class="btn">Ver
+              Detalhes</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
           <div class="project-img">
             <img src="imagens/cndivasclub - pagina de links.jpg" alt="Página de Links">
           </div>
           <div class="project-content">
-            <h3>Página de Links Multifuncional</h3>
-            <p>Uma landing page otimizada para centralizar todos os links importantes em um único lugar — incluindo
-              redes sociais, contatos, projetos e conteúdos. Facilita o acesso rápido para quem visita a bio da cliente
-              nas redes, direcionando o público diretamente aos canais e serviços de forma simples e organizada.</p>
+            <h3>Central de Links</h3>
+            <p>Link-in-Bio personalizada com estética de clínica feminina.</p>
             <div class="project-tags">
-              <span>HTML/CSS</span>
-              <span>JavaScript</span>
+              <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="https://cndclinks.wuaze.com/" class="btn">Ver Detalhes</a>
+            <a href="https://cndclinks.wuaze.com/" target="_blank" rel="noopener noreferrer" class="btn">Ver
+              Detalhes</a>
           </div>
         </div>
-        <div class="project-card">
+
+        <div class="project-card reveal">
           <div class="project-img">
             <img src="imagens/automação-de-tarefas.png" alt="Automação de Tarefas">
           </div>
           <div class="project-content">
-            <h3>Automação de Tarefas</h3>
-            <p>Uma automação simples, que ajuda no cadastro de produtos em um sistema específico.</p>
+            <h3>Automação Python</h3>
+            <p>Automação de cadastro de produtos em um sistema específico.</p>
             <div class="project-tags">
-              <span>Python</span>
-              <span>Pyautogui</span>
-              <span>Pandas</span>
+              <span>Python</span><span>Pyautogui</span><span>Pandas</span>
             </div>
-            <a href="https://github.com/jrsilva-dev/automacao-de-tarefas" class="btn">Ver Detalhes</a>
+            <a href="https://github.com/jrsilva-dev/automacao-de-tarefas" target="_blank" rel="noopener noreferrer"
+              class="btn">Ver Detalhes</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
-  <section id="habilidades">
+  <section id="habilidades" class="reveal">
     <div class="container">
       <h2>Minhas Habilidades</h2>
       <div class="skills-container">
@@ -206,7 +240,7 @@
       </div>
     </div>
   </section>
-  <section id="contato">
+  <section id="contato" class="reveal">
     <div class="container">
       <h2>Entre em Contato</h2>
       <div class="contact-container">
@@ -261,14 +295,34 @@
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <div class="social-links">
-        <a href="https://github.com/jrsilva-dev"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jr-silva-014701296/"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/jrsilva.dev/"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/jrsilva-dev" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/jr-silva-014701296/" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/jrsilva.dev/" target="_blank" rel="noopener noreferrer"><i
+            class="fab fa-instagram"></i></a>
       </div>
       <p class="copyright">© 2025 Jr. Silva Dev. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <div class="whatsapp-float-container" id="whatsappContainer">
+    <div class="whatsapp-options" id="whatsappOptions">
+      <a href="https://wa.me/5584999339597?text=Olá! Vi seu portfólio e gostaria de conversar." target="_blank" class="whatsapp-option-item">
+        <span>Fale Comigo</span>
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <button class="whatsapp-main-button" id="whatsappMainBtn">
+      <i class="fab fa-whatsapp" id="whatsappIcon"></i>
+      <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
+    </button>
+  </div>
+
+  <script src="app.js" defer></script>
+
 </body>

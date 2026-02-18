@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +21,8 @@
 }
 
 body {
+  position: relative;
+  overflow-y: auto;
   background: var(--fundo);
   color: var(--texto);
   overflow-x: hidden;
@@ -46,12 +53,25 @@ nav .container {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 800;
-  background: linear-gradient(45deg, var(--azul), var(--roxo));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  position: relative;
+  width: 150px;
+  height: 100%;
+}
+
+.logo a {
+  display: inline-block;
+  line-height: 0;
+}
+
+.logo img {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 80px;
+  width: auto;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .menu {
@@ -88,12 +108,17 @@ nav .container {
   width: 100%;
 }
 
+.menu-toggle {
+  display: none;
+}
+
 section {
   padding: 100px 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-margin-top: 80px;
 }
 
 section h2 {
@@ -265,7 +290,8 @@ section h2 {
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
   color: #ced4da;
 }
@@ -295,25 +321,31 @@ section h2 {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  padding: 20px 0;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(67, 97, 238, 0.2);
+  transform: translateY(-5px) scale(1.02) !important;
+  border-color: var(--azul);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-img {
-  height: 200px;
+  width: 100%;
+  height: 220px;
   overflow: hidden;
 }
 
@@ -321,41 +353,68 @@ section h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-img img {
-  transform: scale(1.1);
-}
-
+/* Conteúdo interno com espaçamento da imagem */
 .project-content {
-  padding: 20px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-content h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
   color: var(--azul-claro);
+  text-align: left;
 }
 
 .project-content p {
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #adb5bd;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
+/* Tags arredondadas */
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 25px;
 }
 
 .project-tags span {
-  background: rgba(67, 97, 238, 0.1);
+  background: rgba(67, 97, 238, 0.15);
   color: var(--azul-claro);
-  padding: 5px 10px;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 6px 15px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(67, 97, 238, 0.2);
+}
+
+/* efeito Glow roxo da imagem */
+.project-card .btn {
+  align-self: flex-start;
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4361ee, #7209b7);
+  box-shadow: 0 4px 15px rgba(114, 9, 183, 0.4);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 #habilidades {
@@ -364,8 +423,9 @@ section h2 {
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px;
+  padding: 20px 0;
 }
 
 .skill-category {
@@ -522,7 +582,52 @@ footer {
 }
 
 /* Responsividade */
+
+@media (max-width: 1100px) {
+  .skills-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--texto);
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(12, 12, 12, 0.98);
+    padding: 20px 0;
+    text-align: center;
+    gap: 20px;
+    border-bottom: 1px solid rgba(67, 97, 238, 0.2);
+  }
+
+  .menu.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .hero {
     flex-direction: column-reverse;
     text-align: center;
@@ -554,10 +659,6 @@ footer {
   .contact-container {
     grid-template-columns: 1fr;
   }
-
-  .menu {
-    display: none;
-  }
 }
 
 @media (max-width: 768px) {
@@ -574,8 +675,8 @@ footer {
   }
 
   .image-container {
-    width: 250px;
-    height: 250px;
+    width: 190px;
+    height: 190px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -602,6 +703,18 @@ footer {
     padding: 12px;
     font-size: 0.95rem;
   }
+
+  .skills-container {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+  }
+
+  .skill-category {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 #form-message.success {
@@ -620,4 +733,86 @@ footer {
   background: rgba(255, 193, 7, 0.2);
   color: #ffc107;
   border: 1px solid #ffc107;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp-float-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.whatsapp-main-button {
+  width: 60px;
+  height: 60px;
+  background-color: var(--azul);
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-main-button:hover {
+  transform: scale(1.1);
+  background-color: var(--roxo);
+}
+
+/* Esconder as opções por padrão */
+.whatsapp-options {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.whatsapp-option-item {
+  background-color: white;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.whatsapp-option-item i {
+  color: var(--roxo);
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
