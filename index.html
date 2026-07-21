@@ -2,12 +2,15 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfólio Jr. Silva Dev</title>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="main.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JR. Silva Dev - Portfólio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/icons/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="16x16" href="imagens/icons/favicon-32x32.png">
@@ -17,336 +20,484 @@
 </head>
 
 <body>
-  <div id="topo"></div>
 
-  <nav>
-    <div class="container">
-      <div class="logo">
-        <a href="#topo">
-          <img src="imagens/logo-js-dev.png" alt="Logo JS">
-        </a>
-      </div>
-  
-      <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
-      </div>
+  <header class="site-nav" id="siteNav">
+    <div class="site-nav-inner">
+      <a href="#top" class="nav-logo" aria-label="JR. Silva — início">
+        <img src="/imagens/js-logo-portfolio.png" alt="Logo JR. Silva">
+      </a>
 
-      <ul class="menu">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre" class="nav-link">Experiência</a>
+        <a href="#tecnologias" class="nav-link">Tecnologias</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#conexao" class="nav-link">Contatos</a>
+      </nav>
+
+      <div class="nav-right">
+        <a href="#conexao" class="nav-contact-btn">Contato</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false"
+          aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-  </nav>
+  </header>
 
-  <section id="inicio" class="reveal">
-    <div class="container">
-      <div class="hero">
-        <div class="hero-text">
-          <h1>Transformando idéias em <span>soluções digitais</span></h1>
-          <p>Sou Jr. Silva, desenvolvedor Full-Stack, apaixonado por tecnologia e em criar experiências digitais que
-            encantam e solucionam problemas.</p>
-          <a href="#projetos" class="btn">Ver meus projetos</a>
-          <div class="social-links" style="margin-top: 20px;">
-            <a href="https://github.com/jrsilva-dev" target="_blank" rel="noopener noreferrer"><i
-                class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/jr-silva-014701296/" target="_blank" rel="noopener noreferrer"><i
-                class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/jrsilva.dev/" target="_blank" rel="noopener noreferrer"><i
-                class="fab fa-instagram"></i></a>
+  <section class="hero" id="top">
+
+    <div class="bg-word" aria-hidden="true">PORTFÓLIO</div>
+
+    <div class="main">
+      <div class="content">
+        <h1 class="headline">OLÁ, EU SOU<br><em>JR. SILVA</em></h1>
+        <div class="role">DESENVOLVEDOR FULL-STACK</div>
+        <p class="lede">
+          Crio <strong>experiências digitais modernas</strong>, intuitivas e escaláveis —
+          do front-end ao back-end, com atenção a cada detalhe de performance,
+          acessibilidade e design. Cada projeto é construído para durar e crescer
+          junto com quem o usa.
+        </p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#projetos">Ver Projetos</a>
+          <div class="stack">
+            <span>JS</span><span>TS</span><span>NODE</span><span>REACT</span>
           </div>
         </div>
-        <div class="hero-image">
-          <div class="image-container">
-            <img src="imagens/jrsilva dev life style.png" alt="Foto de perfil de Junior Silva">
+      </div>
+
+      <div class="portrait-wrap">
+        <div class="glow-orb" aria-hidden="true"></div>
+        <div class="portrait-shape">
+          <img src="/imagens/jrsilva-png.png"
+            alt="JR. Silva, desenvolvedor full-stack, retrato lateral com iluminação vermelha dramática">
+        </div>
+
+        <svg class="badge" viewBox="0 0 150 150" aria-hidden="true">
+          <defs>
+            <path id="circlePath" d="M 75,75 m -60,0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0" />
+          </defs>
+          <circle cx="75" cy="75" r="60" fill="none" stroke="rgba(255,42,42,0.35)" stroke-width="1" />
+          <text font-family="JetBrains Mono, monospace" font-size="7.2" letter-spacing="2.5" fill="#c9c6c2">
+            <textPath href="#circlePath" startOffset="0%">
+              CRIANDO EXPERIÊNCIAS DIGITAIS QUE FAZEM IMPACTO •
+            </textPath>
+          </text>
+        </svg>
+        <div class="badge-core">JS</div>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <div class="info-row"><span class="k">Localização</span><b>Brasil</b></div>
+      <div class="info-row"><span class="k">Experiência</span><b>1 ano</b></div>
+      <div class="info-row"><span class="k">Disponibilidade</span><b>Mundial</b></div>
+    </div>
+
+  </section>
+
+  <section class="about-section" id="sobre">
+    <div class="about-inner">
+
+      <header class="about-head reveal">
+        <div class="eyebrow">// SOBRE MIM</div>
+        <h2 class="tech-title">QUEM ESTÁ<br><em>POR TRÁS</em></h2>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Olá! Sou <strong>Junior Silva</strong>, desenvolvedor Full Stack.
+            Atualmente estou graduando em Análise e Desenvolvimento de Sistemas, com foco na
+            criação de sistemas web e soluções digitais aplicadas a problemas
+            reais.
+          </p>
+          <p>
+            Atuo no desenvolvimento de aplicações completas, desde o
+            planejamento e UI/UX ao front-end, back-end e banco de dados,
+            utilizando tecnologias como HTML, CSS, Tailwind CSS, JavaScript,
+            React e Node.js, sempre priorizando organização, performance e
+            boa experiência do usuário.
+          </p>
+          <p>
+            Já desenvolvi e comercializei sistemas, além de manter projetos
+            ativos como portfólio profissional, página de links personalizada
+            e aplicações web próprias.
+          </p>
+          <p>
+            Também utilizo Python no desenvolvimento de scripts de automação
+            de tarefas e otimização de processos, criando soluções que
+            reduzem trabalho manual, aumentam produtividade e apoiam a tomada
+            de decisões.
+          </p>
+          <p>
+            Busco constantemente novos desafios e oportunidades para aplicar
+            meus conhecimentos na prática, evoluir tecnicamente e entregar
+            soluções eficientes, funcionais e bem estruturadas.
+          </p>
+        </div>
+
+        <div class="about-stats reveal">
+          <div class="stat-item">
+            <span class="stat-num">1+</span>
+            <span class="stat-label">Ano no mercado</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">Lançamentos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">ADS</span>
+            <span class="stat-label">Graduação em andamento</span>
           </div>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="tech-section" id="tecnologias">
+    <div class="tech-inner">
+
+      <header class="tech-head reveal">
+        <div class="eyebrow">// STACK TÉCNICO</div>
+        <h2 class="tech-title">FERRAMENTAS QUE<br><em>DOMINO</em></h2>
+        <p class="tech-lede">
+          Escolho cada tecnologia pensando em performance, manutenção e
+          experiência real de uso. Do front-end ao back-end, cada ferramenta é utilizada para
+          criar soluções digitais modernas, escaláveis e funcionais.
+        </p>
+      </header>
+
+      <div class="marquee reveal" aria-hidden="true">
+        <div class="marquee-track" id="marqueeTrack">
+          <span class="item">TAILWIND</span><span class="sep">•</span>
+          <span class="item">JAVASCRIPT</span><span class="sep">•</span>
+          <span class="item">TYPESCRIPT</span><span class="sep">•</span>
+          <span class="item">REACT</span><span class="sep">•</span>
+          <span class="item">NODE.JS</span><span class="sep">•</span>
+          <span class="item">NEXT.JS</span><span class="sep">•</span>
+          <span class="item">POSTGRESQL</span><span class="sep">•</span>
+          <span class="item">MONGODB</span><span class="sep">•</span>
+          <span class="item">DOCKER</span><span class="sep">•</span>
+          <span class="item">AWS</span><span class="sep">•</span>
+          <span class="item">GIT</span><span class="sep">•</span>
+        </div>
+      </div>
+
+      <div class="tech-grid">
+
+        <div class="tech-col reveal">
+          <div class="tech-col-label">Frontend</div>
+          <ul>
+            <li>
+              <span class="t-name">React</span>
+              <span class="t-note">Interfaces reativas e componentizadas</span>
+            </li>
+            <li>
+              <span class="t-name">Next.js</span>
+              <span class="t-note">SSR, rotas e performance de produção</span>
+            </li>
+            <li>
+              <span class="t-name">TypeScript</span>
+              <span class="t-note">Tipagem que evita bugs antes do deploy</span>
+            </li>
+            <li>
+              <span class="t-name">Tailwind CSS</span>
+              <span class="t-note">Estilização rápida sem perder consistência</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tech-col reveal">
+          <div class="tech-col-label">Backend</div>
+          <ul>
+            <li>
+              <span class="t-name">Node.js</span>
+              <span class="t-note">APIs rápidas com arquitetura event-driven</span>
+            </li>
+            <li>
+              <span class="t-name">Express</span>
+              <span class="t-note">Rotas e middlewares sem excesso</span>
+            </li>
+            <li>
+              <span class="t-name">Python</span>
+              <span class="t-note">Automatização de tarefas e otimização de processos</span>
+            </li>
+            <li>
+              <span class="t-name">REST APIs</span>
+              <span class="t-note">Contratos simples, previsíveis e versionáveis</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tech-col reveal">
+          <div class="tech-col-label">Banco de Dados</div>
+          <ul>
+            <li>
+              <span class="t-name">PostgreSQL</span>
+              <span class="t-note">Dados relacionais com integridade forte</span>
+            </li>
+            <li>
+              <span class="t-name">MongoDB</span>
+              <span class="t-note">Flexibilidade para dados não estruturados</span>
+            </li>
+            <li>
+          </ul>
+        </div>
+
+        <div class="tech-col reveal">
+          <div class="tech-col-label">Ferramentas</div>
+          <ul>
+            <li>
+              <span class="t-name">Docker</span>
+              <span class="t-note">Ambientes consistentes do dev ao prod</span>
+            </li>
+            <li>
+              <span class="t-name">AWS</span>
+              <span class="t-note">Deploy e infraestrutura escalável</span>
+            </li>
+            <li>
+              <span class="t-name">Git</span>
+              <span class="t-note">Versionamento e colaboração em equipe</span>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
-  <section id="sobre" class="reveal">
-    <div class="container">
-      <h2>Sobre Mim</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>Olá! Sou Junior Silva, desenvolvedor Full Stack, graduando em Análise e Desenvolvimento de Sistemas,
-            com foco na criação de sistemas web e soluções digitais aplicadas a problemas reais.</p>
-          <p>Atuo no desenvolvimento de aplicações completas, desde
-            o planejamento e UI/UX ao front-end, back-end e banco de dados,
-            utilizando tecnologias como HTML, CSS, Tailwind CSS, JavaScript, React e Node.js,
-            sempre priorizando organização, performance e boa experiência do usuário.</p>
-          <p>Já desenvolvi e comercializei sistemas, além de manter projetos ativos como portfólio profissional,
-            página de links personalizada e aplicações web próprias.</p>
-          <p>Também utilizo Python no desenvolvimento de scripts de automação de tarefas e otimização de processos,
-            criando soluções que reduzem trabalho manual, aumentam produtividade e apoiam a tomada de decisões.</p>
-          <p>Busco constantemente novos desafios e oportunidades para aplicar meus conhecimentos na prática,
-            evoluir tecnicamente e entregar soluções eficientes, funcionais e bem estruturadas.</p>
-        </div>
-        <div class="skills">
-          <div class="skill-item">
-            <h3>Frontend</h3>
-            <p>HTML, CSS, TailwindCSS, JavaScript, React</p>
-          </div>
-          <div class="skill-item">
-            <h3>Backend</h3>
-            <p>Node.js, Express, Next, Python, APIs REST</p>
-          </div>
-          <div class="skill-item">
-            <h3>Dados & Automação</h3>
-            <p>PostgreSQL, Supabase, Firebase, Python</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="projetos" class="reveal">
-    <div class="container">
-      <h2>Meus Projetos</h2>
+  <section class="projects-section" id="projetos">
+    <div class="projects-inner">
+
+      <header class="proj-head reveal">
+        <div class="eyebrow">// MEUS PROJETOS</div>
+        <h2 class="tech-title">PROJETOS<br><em>SELECIONADOS</em></h2>
+        <p class="tech-lede">
+          Do sistema em construção às páginas já publicadas, uma amostra de
+          como transformo um problema real em produto funcional.
+        </p>
+      </header>
 
       <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/simplificacash-saas.png" alt="SimplificaCash - Sistema de Gestão Financeira">
+        <article class="project-card featured reveal" data-status="dev">
+          <div class="card-media" data-project="simplificacash" data-image="/imagens/simplificacash-saas.png"
+            data-label="SimplificaCash">
+            <canvas class="card-3d"></canvas>
+            <span class="media-badge dev">Em Desenvolvimento</span>
           </div>
-          <div class="project-content">
-            <h3>SimplificaCash - Sistema de Gestão Financeira</h3>
-            <p>Sistema de gestão financeira desenvolvido para automatizar o controle de fluxo de caixa, gerar relatórios e melhorar a tomada de decisões financeiras.
-              Sistema em desenvolvimento, com previsão de lançamento em breve.
+          <div class="card-body">
+            <h3 class="card-title">SimplificaCash</h3>
+            <p class="card-sub">Sistema de Gestão Financeira</p>
+            <p class="card-desc">
+              Sistema de gestão financeira desenvolvido para automatizar o
+              controle de fluxo de caixa, gerar relatórios e melhorar a tomada
+              de decisões financeiras. Sistema em desenvolvimento, com
+              previsão de lançamento em breve.
             </p>
-            <div class="project-tags">
+            <div class="card-stack">
               <span>HTML</span><span>CSS</span><span>JS</span><span>PostgreSQL</span><span>Supabase</span>
             </div>
-            <a href="" target="_blank" rel="noopener noreferrer"
-              class="btn">Em Desenvolvimento</a>
+            <div class="card-cta">
+              <span class="btn-ghost">Lançamento em breve</span>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/cndivasclub-page.png" alt="Landing Page - CN Divas Club">
+        <!-- PROJETO 2 -->
+        <article class="project-card reveal" data-status="live">
+          <div class="card-media" data-project="cndivasclub" data-image="/imagens/cndivasclub-page.png"
+            data-label="CN Divas Club">
+            <canvas class="card-3d"></canvas>
+            <span class="media-badge live">Live</span>
           </div>
-          <div class="project-content">
-            <h3>Landing Page - CN Divas Club</h3>
-            <p>Landing page desenvolvida para a CN Divas Club, com foco em apresentar a identidade da marca, 
-              engajar o público e centralizar informações importantes como redes sociais, conteúdos exclusivos e formas de contato.</p>
-            <div class="project-tags">
+          <div class="card-body">
+            <h3 class="card-title">CN Divas Club</h3>
+            <p class="card-sub">Landing Page</p>
+            <p class="card-desc">
+              Landing page desenvolvida para a CN Divas Club, com foco em
+              apresentar a identidade da marca, engajar o público e centralizar
+              informações importantes como redes sociais, conteúdos exclusivos
+              e formas de contato.
+            </p>
+            <div class="card-stack">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="https://cndivasclub.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="btn">Ver Detalhes</a>
+            <div class="card-cta">
+              <a class="btn-ghost" href="https://cndivasclub.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Visitar projeto →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/biimax-links.png" alt="Página de Links">
+        <!-- PROJETO 3 -->
+        <article class="project-card reveal" data-status="live">
+          <div class="card-media" data-project="biimax" data-image="/imagens/biimax-links.png" data-label="Biimax">
+            <canvas class="card-3d"></canvas>
+            <span class="media-badge live">Live</span>
           </div>
-          <div class="project-content">
-            <h3>Landing Page - Biimax Contato Oficial</h3>
-            <p>Landing page desenvolvida para o artista Biimax, com foco em centralizar e destacar seus principais links, lançamentos e plataformas musicais.</p>
-            <div class="project-tags">
+          <div class="card-body">
+            <h3 class="card-title">Biimax Contato Oficial</h3>
+            <p class="card-sub">Landing Page</p>
+            <p class="card-desc">
+              Landing page desenvolvida para o artista Biimax, com foco em
+              centralizar e destacar seus principais links, lançamentos e
+              plataformas musicais.
+            </p>
+            <div class="card-stack">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="https://biimax-links.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver
-              Detalhes</a>
+            <div class="card-cta">
+              <a class="btn-ghost" href="https://biimax-links.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Visitar projeto →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/complexo-xp-server.png" alt="Branding Page – Complexo XP">
+        <!-- PROJETO 4 -->
+        <article class="project-card reveal" data-status="live">
+          <div class="card-media" data-project="complexoxp" data-image="/imagens/complexo-xp-server.png"
+            data-label="Complexo XP">
+            <canvas class="card-3d"></canvas>
+            <span class="media-badge live">Live</span>
           </div>
-          <div class="project-content">
-            <h3>Bridge Page - Complexo XP</h3>
-            <p>Bridge page desenvolvida para o Complexo XP Server, com o objetivo de apresentar o servidor e facilitar o acesso da comunidade aos principais links e informações. 
-              O projeto possui um design focado na experiência do usuário e na identidade visual do servidor.</p>
-            <div class="project-tags">
+          <div class="card-body">
+            <h3 class="card-title">Complexo XP</h3>
+            <p class="card-sub">Bridge Page</p>
+            <p class="card-desc">
+              Bridge page desenvolvida para o Complexo XP Server, com o
+              objetivo de apresentar o servidor e facilitar o acesso da
+              comunidade aos principais links e informações. Design focado na
+              experiência do usuário e na identidade visual do servidor.
+            </p>
+            <div class="card-stack">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="https://complexoxpserver.vercel.app/" target="_blank" rel="noopener noreferrer"
-              class="btn">Ver Detalhes</a>
+            <div class="card-cta">
+              <a class="btn-ghost" href="https://complexoxpserver.vercel.app/" target="_blank"
+                rel="noopener noreferrer">Visitar projeto →</a>
+            </div>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/meus-links.png" alt="Central de Links – Jr. Silva Dev">
+        <!-- PROJETO 5 — estética cyberpunk/neon -->
+        <article class="project-card neon reveal" data-status="live">
+          <div class="card-media" data-project="central-links" data-image="/imagens/meus-links.png"
+            data-label="Central de Links" data-accent="neon">
+            <canvas class="card-3d"></canvas>
+            <span class="media-badge live">Live</span>
           </div>
-          <div class="project-content">
-            <h3>Central de Links</h3>
-            <p>Landing page estilo link-in-bio desenvolvida para centralizar links pessoais e profissionais de forma prática e organizada. 
-              Com estética Cyberpunk/Neon, projeto prioriza um design limpo e responsivo, com foco na usabilidade e rápida navegação.</p>
-            <div class="project-tags">
+          <div class="card-body">
+            <h3 class="card-title">Central de Links</h3>
+            <p class="card-sub">Link-in-Bio</p>
+            <p class="card-desc">
+              Landing page estilo link-in-bio desenvolvida para centralizar
+              links pessoais e profissionais de forma prática e organizada.
+              Estética cyberpunk/neon, com design limpo, responsivo e foco na
+              usabilidade e rápida navegação.
+            </p>
+            <div class="card-stack">
               <span>HTML</span><span>CSS</span><span>JS</span>
             </div>
-            <a href="https://jrsilvadev-links.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn">Ver
-              Detalhes</a>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-img">
-            <img src="imagens/automação-de-tarefas.png" alt="Automação de Tarefas">
-          </div>
-          <div class="project-content">
-            <h3>Automação Python</h3>
-            <p>Automação de cadastro de produtos em um sistema específico.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Pyautogui</span><span>Pandas</span>
+            <div class="card-cta">
+              <a class="btn-ghost" href="https://jrsilvadev-links.vercel.app" target="_blank"
+                rel="noopener noreferrer">Visitar projeto →</a>
             </div>
-            <a href="https://github.com/jrsilva-dev/automacao-de-tarefas" target="_blank" rel="noopener noreferrer"
-              class="btn">Ver Detalhes</a>
           </div>
-        </div>
+        </article>
 
       </div>
     </div>
   </section>
-  <section id="habilidades" class="reveal">
-    <div class="container">
-      <h2>Minhas Habilidades</h2>
-      <div class="skills-container">
-        <div class="skill-category">
-          <div class="skill-icon">
-            <i class="fas fa-code"></i>
-          </div>
-          <h3>Frontend</h3>
-          <ul>
-            <li>HTML5 & CSS3</li>
-            <li>TailwindCSS</li>
-            <li>JavaScript (ES6+)</li>
-            <li>React.js</li>
-            <li>Responsive Design</li>
-          </ul>
-        </div>
 
-        <div class="skill-category">
-          <div class="skill-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>Backend</h3>
-          <ul>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>Next.js</li>
-            <li>Python</li>
-            <li>RESTful APIs</li>
-          </ul>
-        </div>
+  <section class="connect-section" id="conexao">
+    <div class="connect-inner">
+      <div class="eyebrow">// CONEXÃO</div>
+      <h2 class="connect-title">CRIE O SEU<br><em>LEGADO</em></h2>
+      <p class="connect-lede">
+        Grandes produtos nascem de boas conversas. Escolha o canal que
+        preferir e vamos começar a construir o seu.
+      </p>
 
-        <div class="skill-category">
-          <div class="skill-icon">
-            <i class="fas fa-database"></i>
-          </div>  
-          <h3>Dados & Automação</h3>
-          <ul>
-            <li>PostgreSQL</li>
-            <li>Supabase</li>
-            <li>Firebase</li>
-            <li>Python</li>
-          </ul>
-        </div>
+      <div class="connect-grid">
 
-        <div class="skill-category">
-          <div class="skill-icon">
-            <i class="fas fa-tools"></i>
-          </div>
-          <h3>Ferramentas</h3>
-          <ul>
-            <li>Git & GitHub</li>
-            <li>VS Code</li>
-          </ul>
-        </div>
+        <a class="connect-card reveal" style="--brand:#ea4335" href="mailto:jrsilva.dev084@gmail.com"
+          aria-label="Enviar e-mail para jrsilva.dev084@gmail.com">
+          <span class="connect-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="4.5" width="21" height="15" rx="2" stroke="currentColor" stroke-width="1.6" />
+              <path d="M2.5 6L12 13L21.5 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="connect-label">E-mail</span>
+          <span class="connect-handle">jrsilva.dev084@gmail.com</span>
+        </a>
+
+        <a class="connect-card reveal" style="--brand:#0a66c2" href="https://www.linkedin.com/in/jr-silva-014701296/"
+          target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil no LinkedIn">
+          <span class="connect-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="21" height="21" rx="4" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="7.2" cy="7.6" r="1.55" fill="currentColor" />
+              <path d="M7.2 10.9V17.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+              <path d="M11.4 17.4V13.6C11.4 11.9 12.3 10.8 13.8 10.8C15.2 10.8 16 11.8 16 13.5V17.4"
+                stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M11.4 13.1V17.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="connect-label">LinkedIn</span>
+          <span class="connect-handle">/in/jr-silva</span>
+        </a>
+
+        <a class="connect-card reveal" style="--brand:#25d366"
+          href="https://api.whatsapp.com/send/?phone=5584999339597&amp;text=Ol%C3%A1%21+Vi+seu+portf%C3%B3lio+e+gostaria+de+conversar.&amp;type=phone_number&amp;app_absent=0"
+          target="_blank" rel="noopener noreferrer" aria-label="Conversar no WhatsApp">
+          <span class="connect-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.04 2.5c-5.26 0-9.54 4.28-9.54 9.55 0 1.68.44 3.31 1.28 4.75L2.5 21.5l4.87-1.27a9.5 9.5 0 0 0 4.67 1.22h.01c5.26 0 9.54-4.28 9.54-9.55S17.3 2.5 12.04 2.5Z"
+                stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              <path
+                d="M8.9 7.6c-.22-.5-.4-.5-.6-.51h-.5c-.2 0-.5.07-.77.37-.26.3-1 1-1 2.42 0 1.43 1.03 2.8 1.17 3 .15.2 2 3.2 4.94 4.36 2.44.97 2.94.78 3.47.73.53-.05 1.7-.7 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.2-.55-.35-.28-.15-1.7-.84-1.96-.94-.26-.1-.46-.15-.65.15-.2.3-.74.94-.9 1.13-.17.2-.33.22-.62.08-.28-.15-1.2-.44-2.28-1.4-.84-.75-1.41-1.68-1.57-1.96-.17-.3-.02-.45.12-.6.13-.13.3-.33.44-.5.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.63-1.57-.9-2.15Z"
+                fill="currentColor" />
+            </svg>
+          </span>
+          <span class="connect-label">WhatsApp</span>
+          <span class="connect-handle">Enviar mensagem</span>
+        </a>
+
+        <a class="connect-card reveal" style="--brand:#dd2a7b" href="https://www.instagram.com/jrsilva.dev/"
+          target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil no Instagram">
+          <span class="connect-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1.5" y="1.5" width="21" height="21" rx="6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="12" cy="12" r="4.6" stroke="currentColor" stroke-width="1.6" />
+              <circle cx="17.6" cy="6.4" r="1.15" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="connect-label">Instagram</span>
+          <span class="connect-handle">@jrsilva.dev</span>
+        </a>
 
       </div>
     </div>
-  </section>
-  <section id="contato" class="reveal">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <div class="contact-container">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <h4>E-mail</h4>
-              <p>jrsilva.dev084@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-phone"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Telefone</h4>
-              <p>+55 (84) 99933-9597</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Localização</h4>
-              <p>Natal - Rio Grande do Norte, Brasil</p>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form">
-          <form id="appointmentForm" action="https://formspree.io/f/xvgwovvw" method="POST">
-            <input type="hidden" name="_subject" value="Nova menssagem!">
-            <input type="hidden" name="_next" value="#contato">
-            <div class="form-group">
-              <label for="name">Nome</label>
-              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Mensagem</label>
-              <textarea id="message" name="message" placeholder="Como posso ajudar você?" required></textarea>
-            </div>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-          </form>
-        </div>
+
+    <footer class="site-footer">
+      <span>© 2026 JR. Silva Dev — Todos os direitos reservados</span>
+      <div class="footer-links">
+        <a href="https://github.com/jrsilva-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="sep">|</span>
+        <a href="#top">Voltar ao topo ↑</a>
       </div>
-    </div>
+    </footer>
   </section>
 
-  <footer>
-    <div class="container">
-      <div class="social-links">
-        <a href="https://github.com/jrsilva-dev" target="_blank" rel="noopener noreferrer"><i
-            class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/jr-silva-014701296/" target="_blank" rel="noopener noreferrer"><i
-            class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/jrsilva.dev/" target="_blank" rel="noopener noreferrer"><i
-            class="fab fa-instagram"></i></a>
-      </div>
-      <p class="copyright">© 2025 Jr. Silva Dev. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <div class="whatsapp-float-container" id="whatsappContainer">
-    <div class="whatsapp-options" id="whatsappOptions">
-      <a href="https://wa.me/5584999339597?text=Olá! Vi seu portfólio e gostaria de conversar." target="_blank" class="whatsapp-option-item">
-        <span>Fale Comigo</span>
-        <i class="fab fa-whatsapp"></i>
-      </a>
-    </div>
-    <button class="whatsapp-main-button" id="whatsappMainBtn">
-      <i class="fab fa-whatsapp" id="whatsappIcon"></i>
-      <i class="fas fa-times" id="closeIcon" style="display: none;"></i>
-    </button>
-  </div>
-
-  <script src="app.js" defer></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
+</html>
