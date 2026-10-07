@@ -268,8 +268,8 @@ p.lede strong {
 
 .badge {
     position: absolute;
-    right: -1.5rem;
-    bottom: 0.7rem;
+    right: -2rem;
+    bottom: 2.5rem;
     width: 150px;
     height: 150px;
     z-index: 3;
