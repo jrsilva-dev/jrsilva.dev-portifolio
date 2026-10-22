@@ -796,7 +796,7 @@ html.no-gsap .reveal {
 }
 
 .project-card.neon .media-badge.live {
-    background: linear-gradient(135deg, #6be8ff, #2ad9ff);
+    background: linear-gradient(135deg, #6bff72, #2aff6a);
 }
 
 .card-body {
@@ -888,18 +888,18 @@ span.btn-ghost {
 }
 
 .project-card.neon .card-sub {
-    color: #2ad9ff;
+    color: #6bff72
 }
 
 .project-card.neon:hover {
-    border-color: rgba(42, 217, 255, .45);
-    box-shadow: 0 24px 50px -20px rgba(42, 217, 255, .22);
+    border-color: rgba(42, 255, 106, 0.45);
+    box-shadow: 0 24px 50px -20px rgba(42, 255, 106, .22);
 }
 
 .project-card.neon a.btn-ghost:hover {
-    color: #2ad9ff;
-    border-color: #2ad9ff;
-    background: rgba(42, 217, 255, .06);
+    color: #2aff6a;
+    border-color: #2aff6a;
+    background: rgba(42, 255, 106, .06);
 }
 
 @keyframes blipPulse {
